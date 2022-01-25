@@ -1,3 +1,11 @@
 #selectMovie, #receipt {
   border: solid black;
 }
+
+.receipt-col {
+  border-right: 1px solid lightgray;
+}
+.delete-button {
+  color: red;
+  font-weight: bold;
+}

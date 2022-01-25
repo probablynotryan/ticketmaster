@@ -8,18 +8,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Fandang-thisiscool-go</title>
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="col-6" id="selectMovie">
+        <br>
         <div class="container">
-          <h5>Get Your Movie Tickets Here!</h5>
+          <form id="add-movie">
+            <h5>Get Your Movie Tickets Here!</h5>
+            <label for="movieInput">Movie:</label>
+            <select class="form-control" id="movieInput">
+              <option value="Garfield5">Garfield 5: Fast and the Furriest</option>
+              <option value="Garfield20">Garfield 20: Yes, We're Still Making These</option>
+              <option value="Godzilla">Godzilla 29014: Again</option>
+            </select>
+            <label for="timeInput">Time:</label>
+            <select class="form-control" id="timeInput">
+              <option value="24">12:00am</option>
+              <option value="14">2:00pm</option>
+              <option value="21">9:00pm</option>
+            </select>
+            <label for="ticketTypeInput">Ticket Type:</label>
+            <select class="form-control" id="ticketTypeInput">
+              <option value="6">Child (&#60; 13)</option>
+              <option value="30">General Admission</option>
+              <option value="66">Senior (&#62; 65)</option>
+            </select>
+            <br>
+            <button type="submit" class="btn btn-primary" id="addTicket">Add Ticket</button>
+          </form>
         </div>
+        <br> 
       </div>
+  
       <div class="col-6" id="receipt">
+        <br>
         <h5>Your Purchase</h5>
+        <div class="receipt-container">
+     
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-7 receipt-col" id="ticket-count">
+            0 Tickets
+          </div>
+          <div class="col-3 receipt-col">
+            Total:
+          </div>
+          <div class="col-2 receipt-col" id="total-price">
+            $0
+          </div>
+        </div>
       </div>
     </div>
   </div>

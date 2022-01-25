@@ -59,6 +59,17 @@ myReceipt.addMovie(movie);
 Receipt {movies: {…}}
 
 
+### Describe Receipt.prototype.assignID();  
+Test: "It add an incremental ID"  
+
+Code: 
+let myReceipt = new Receipt();  
+let price = getPrice(44, "old", 16);  
+let movie = new MovieTicket ("Garfield 5", price, 16);  
+myReceipt.addMovie(movie);  
+Receipt {movies: {…} currentId: 1, then 2, 3 etc}
+
+
 ## Known Bugs
 
 * _Any known issues_
