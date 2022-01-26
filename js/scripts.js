@@ -80,9 +80,39 @@ function attachContactListenersForDelete(id) {
 
 
 $(document).ready(function() {
+
+  $("label#Garfield20-img").click(function() {
+    $("#Garfield20-img").css("box-shadow","rgb(8 25 189 / 55%) 0px 0px 24px");
+    $("#Garfield5-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+    $("#Godzilla-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+  });
+  $("label#Garfield5-img").click(function() {
+    $("#Garfield5-img").css("box-shadow","rgb(8 25 189 / 55%) 0px 0px 24px");
+    $("#Garfield20-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+    $("#Godzilla-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+  });
+  $("label#Godzilla-img").click(function() {
+    $("#Godzilla-img").css("box-shadow","rgb(8 25 189 / 55%) 0px 0px 24px");
+    $("#Garfield5-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+    $("#Garfield20-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+  });
+
 	$("form#add-movie").submit(function(event) {
     event.preventDefault();
-    let movieSelect = $("#movieInput").val();
+    let movieSelect;
+    if ($("#Garfield20").is(":checked")) {
+      movieSelect = "Garfield20";
+    }
+    if ($("#Garfield5").is(":checked")) {
+      movieSelect = "Garfield5";
+    }
+    if ($("#Godzilla").is(":checked")) {
+      movieSelect = "Godzilla";
+    }
+    console.log(movieSelect);
+
+
+    //let movieSelect = $("#movieInput").val();
     let timeSelect = $("#timeInput").val();
     let ticketTypeSelect = $("#ticketTypeInput").val();
     let movieAge;
@@ -120,7 +150,6 @@ $(document).ready(function() {
         movieAge = "";
         break;
     }
-
     
     let actualPrice = getPrice(ticketTypeSelect, movieAge, parseInt(timeSelect));
 
@@ -130,5 +159,13 @@ $(document).ready(function() {
     addToVisibleReceipt(movie);
     calculateCounts();
     attachContactListenersForDelete(movie.id);
+    $("#Garfield20-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+    $("#Garfield5-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+    $("#Godzilla-img").css("box-shadow","rgb(0 0 0 / 55%) 0px 0px 0px");
+    $('input[type="checkbox"]').prop('checked', false);
   });
+
+  $('input[type="checkbox"]').on('change', function() {
+    $('input[type="checkbox"]').not(this).prop('checked', false);
+ });
 });

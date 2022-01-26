@@ -21,3 +21,49 @@ body {
   margin-top: 10px;
   min-height: 500px;
 }
+
+.MoviePoster {
+  width: 100%;
+ 
+}
+
+
+input[type=checkbox] {
+  display:none;
+}
+
+label {
+  width: 100%;
+}
+
+input#Garfield20[type=checkbox] + label
+{
+  background-image: url("../img/poster.jpg");
+  height: 90%;
+  width: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+/* #Garfield20-img {
+  border: 5px solid black;
+}  */
+input#Garfield5[type=checkbox] + label
+{
+  background-image: url("../img/poster2.jpg");
+  height: 90%;
+  width: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+input#Godzilla[type=checkbox] + label
+{
+  background-image: url("../img/poster3.png");
+  height: 250px;
+  width: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}

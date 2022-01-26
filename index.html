@@ -17,13 +17,31 @@
         <br>
         <div class="container">
           <form id="add-movie">
-            <h5>Get Your Movie Tickets Here!</h5>
-            <label for="movieInput">Movie:</label>
+            <h5>Select Your Movie and Get Tickets!</h5>
+            <!-- <label for="movieInput">Movie:</label>
             <select class="form-control" id="movieInput">
               <option value="Garfield5">Garfield 5: Fast and the Furriest</option>
               <option value="Garfield20">Garfield 20: Yes, We're Still Making These</option>
               <option value="Godzilla">Godzilla 29014: Again</option>
-            </select>
+            </select> -->
+
+
+
+
+            <div class="row">
+              <div class="col-4">
+                <input type=checkbox name="Garfield20" id="Garfield20" class="MoviePoster">
+                <label for="Garfield20" id="Garfield20-img"></label>
+              </div>
+              <div class="col-4">
+                <input type=checkbox name="Garfield5" id="Garfield5" class="MoviePoster">
+                <label for="Garfield5" id="Garfield5-img"></label>
+              </div>
+              <div class="col-4">
+                <input type=checkbox name="Godzilla" id="Godzilla" class="MoviePoster">
+                <label for="Godzilla" id="Godzilla-img"></label>
+              </div>
+            </div>
             <label for="timeInput">Time:</label>
             <select class="form-control" id="timeInput">
               <option value="24">12:00am</option>
